@@ -14,6 +14,10 @@ import {
   Briefcase,
   ArrowUpRight,
 } from "lucide-react";
+import portraitAsset from "@/assets/adham-portrait.jpg.asset.json";
+import salesDashboardAsset from "@/assets/sales-dashboard.png.asset.json";
+import hotelDashboardAsset from "@/assets/hotel-dashboard.png.asset.json";
+import universityAsset from "@/assets/alexandria-university.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -106,6 +110,9 @@ const projects = [
     tags: ["Python", "Advanced Excel", "EDA", "Dashboards"],
     link: GITHUB,
     bars: [45, 70, 38, 88, 60, 96, 52],
+    image: hotelDashboardAsset.url,
+    imageAlt:
+      "Hotel Booking Performance and Cancellation Analysis dashboard showing cancellation rate, booking value and monthly trend charts",
   },
   {
     title: "Sales Performance Analysis",
@@ -116,6 +123,9 @@ const projects = [
     tags: ["Python", "Excel", "Segmentation", "Retention"],
     link: GITHUB,
     bars: [30, 52, 64, 48, 82, 71, 94],
+    image: salesDashboardAsset.url,
+    imageAlt:
+      "Superstore Sales Performance dashboard with sales, profit, RFM score and regional performance charts",
   },
 ];
 
@@ -224,29 +234,47 @@ function Index() {
               </div>
             </div>
 
-            <div
-              className="rounded-2xl border border-border bg-card/80 p-6"
-              style={{ boxShadow: "var(--shadow-elegant)" }}
-            >
-              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                <BarChart3 className="size-4 text-primary" /> Analyst snapshot
+            <div className="flex flex-col gap-6">
+              <div
+                className="relative overflow-hidden rounded-2xl border border-border bg-card/80"
+                style={{ boxShadow: "var(--shadow-elegant)" }}
+              >
+                <img
+                  src={portraitAsset.url}
+                  alt="Portrait of Adham Hany Mahmoud, Data Analyst based in Alexandria, Egypt"
+                  width={960}
+                  height={1280}
+                  className="aspect-[4/5] w-full object-cover object-top sm:aspect-[3/4]"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background via-background/25 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 flex items-center gap-2 p-5 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                  <BarChart3 className="size-4 text-primary" /> Analyst snapshot
+                </div>
               </div>
-              <div className="mt-6 flex h-40 items-end gap-2.5">
-                {[38, 55, 42, 72, 60, 85, 68, 96].map((h, i) => (
-                  <div
-                    key={i}
-                    className="flex-1 rounded-t-sm bg-primary/70"
-                    style={{ height: `${h}%`, opacity: 0.35 + i * 0.08 }}
-                  />
-                ))}
-              </div>
-              <div className="mt-6 grid gap-4 border-t border-border pt-6">
-                {stats.map((s) => (
-                  <div key={s.label} className="flex items-baseline justify-between">
-                    <span className="font-display text-2xl font-bold text-primary">{s.value}</span>
-                    <span className="text-xs text-muted-foreground">{s.label}</span>
-                  </div>
-                ))}
+
+              <div
+                className="rounded-2xl border border-border bg-card/80 p-6"
+                style={{ boxShadow: "var(--shadow-elegant)" }}
+              >
+                <div className="flex h-24 items-end gap-2.5">
+                  {[38, 55, 42, 72, 60, 85, 68, 96].map((h, i) => (
+                    <div
+                      key={i}
+                      className="flex-1 rounded-t-sm bg-primary/70"
+                      style={{ height: `${h}%`, opacity: 0.35 + i * 0.08 }}
+                    />
+                  ))}
+                </div>
+                <div className="mt-6 grid gap-4 border-t border-border pt-6">
+                  {stats.map((s) => (
+                    <div key={s.label} className="flex items-baseline justify-between">
+                      <span className="font-display text-2xl font-bold text-primary">
+                        {s.value}
+                      </span>
+                      <span className="text-xs text-muted-foreground">{s.label}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -321,46 +349,60 @@ function Index() {
             {projects.map((p) => (
               <article
                 key={p.title}
-                className="group flex flex-col rounded-xl border border-border bg-card p-7 transition-colors hover:border-primary/60"
+                className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-colors hover:border-primary/60"
               >
-                <div className="flex h-20 items-end gap-2">
-                  {p.bars.map((h, i) => (
-                    <div
-                      key={i}
-                      className="flex-1 rounded-t-sm bg-primary/40 transition-colors group-hover:bg-primary/70"
-                      style={{ height: `${h}%` }}
-                    />
-                  ))}
-                </div>
-                <div className="mt-6 flex items-baseline gap-2">
-                  <span className="font-display text-2xl font-bold text-primary">{p.metric}</span>
-                  <span className="text-xs uppercase tracking-wide text-muted-foreground">
-                    {p.metricLabel}
-                  </span>
-                </div>
-                <h3 className="mt-3 font-display text-xl font-semibold">{p.title}</h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                  {p.description}
-                </p>
-                <ul className="mt-5 flex flex-wrap gap-2">
-                  {p.tags.map((t) => (
-                    <li
-                      key={t}
-                      className="rounded-md bg-secondary px-2.5 py-1 text-xs font-medium text-secondary-foreground"
-                    >
-                      {t}
-                    </li>
-                  ))}
-                </ul>
                 <a
                   href={p.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+                  className="relative block overflow-hidden border-b border-border"
+                  aria-label={`${p.title} — view on GitHub`}
                 >
-                  View on GitHub <ArrowUpRight className="size-4" />
+                  <img
+                    src={p.image}
+                    alt={p.imageAlt}
+                    loading="lazy"
+                    className="aspect-[16/9] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card via-card/25 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-60" />
+                  <span className="pointer-events-none absolute right-4 top-4 inline-flex items-center gap-1 rounded-md border border-primary/40 bg-background/80 px-2.5 py-1 text-xs font-semibold text-primary opacity-0 backdrop-blur transition-opacity duration-300 group-hover:opacity-100">
+                    View dashboard <ArrowUpRight className="size-3.5" />
+                  </span>
                 </a>
+                <div className="flex flex-1 flex-col p-7">
+                  <div className="flex items-baseline gap-2">
+                    <span className="font-display text-2xl font-bold text-primary">
+                      {p.metric}
+                    </span>
+                    <span className="text-xs uppercase tracking-wide text-muted-foreground">
+                      {p.metricLabel}
+                    </span>
+                  </div>
+                  <h3 className="mt-3 font-display text-xl font-semibold">{p.title}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                    {p.description}
+                  </p>
+                  <ul className="mt-5 flex flex-wrap gap-2">
+                    {p.tags.map((t) => (
+                      <li
+                        key={t}
+                        className="rounded-md bg-secondary px-2.5 py-1 text-xs font-medium text-secondary-foreground"
+                      >
+                        {t}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+                  >
+                    View on GitHub <ArrowUpRight className="size-4" />
+                  </a>
+                </div>
               </article>
+
             ))}
           </div>
         </section>
@@ -406,15 +448,26 @@ function Index() {
         <section id="education" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
           <SectionHeading eyebrow="05 — Education" title="Education & certificates" />
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="rounded-xl border border-border bg-card p-7">
-              <GraduationCap className="size-6 text-primary" />
-              <h3 className="mt-4 font-display text-lg font-semibold">
-                Bachelor of Computing and Data Science
-              </h3>
-              <p className="mt-1 text-sm text-muted-foreground">Alexandria University</p>
-              <p className="mt-4 inline-block rounded-md bg-secondary px-3 py-1 text-xs font-semibold text-secondary-foreground">
-                Last GPA: 3.7 / 4.0
-              </p>
+            <div className="group overflow-hidden rounded-xl border border-border bg-card">
+              <div className="relative overflow-hidden border-b border-border">
+                <img
+                  src={universityAsset.url}
+                  alt="Faculty of Computing and Data Science building at Alexandria University"
+                  loading="lazy"
+                  className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+              </div>
+              <div className="p-7">
+                <GraduationCap className="size-6 text-primary" />
+                <h3 className="mt-4 font-display text-lg font-semibold">
+                  Bachelor of Computing and Data Science
+                </h3>
+                <p className="mt-1 text-sm text-muted-foreground">Alexandria University</p>
+                <p className="mt-4 inline-block rounded-md bg-secondary px-3 py-1 text-xs font-semibold text-secondary-foreground">
+                  Last GPA: 3.7 / 4.0
+                </p>
+              </div>
             </div>
             <div className="rounded-xl border border-border bg-card p-7">
               <Award className="size-6 text-primary" />
