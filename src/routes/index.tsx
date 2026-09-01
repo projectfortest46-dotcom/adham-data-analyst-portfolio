@@ -14,6 +14,10 @@ import {
   Briefcase,
   ArrowUpRight,
 } from "lucide-react";
+import portraitAsset from "@/assets/adham-portrait.jpg.asset.json";
+import salesDashboardAsset from "@/assets/sales-dashboard.png.asset.json";
+import hotelDashboardAsset from "@/assets/hotel-dashboard.png.asset.json";
+import universityAsset from "@/assets/alexandria-university.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
