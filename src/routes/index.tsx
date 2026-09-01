@@ -234,29 +234,47 @@ function Index() {
               </div>
             </div>
 
-            <div
-              className="rounded-2xl border border-border bg-card/80 p-6"
-              style={{ boxShadow: "var(--shadow-elegant)" }}
-            >
-              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                <BarChart3 className="size-4 text-primary" /> Analyst snapshot
+            <div className="flex flex-col gap-6">
+              <div
+                className="relative overflow-hidden rounded-2xl border border-border bg-card/80"
+                style={{ boxShadow: "var(--shadow-elegant)" }}
+              >
+                <img
+                  src={portraitAsset.url}
+                  alt="Portrait of Adham Hany Mahmoud, Data Analyst based in Alexandria, Egypt"
+                  width={960}
+                  height={1280}
+                  className="aspect-[4/5] w-full object-cover object-top sm:aspect-[3/4]"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background via-background/25 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 flex items-center gap-2 p-5 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                  <BarChart3 className="size-4 text-primary" /> Analyst snapshot
+                </div>
               </div>
-              <div className="mt-6 flex h-40 items-end gap-2.5">
-                {[38, 55, 42, 72, 60, 85, 68, 96].map((h, i) => (
-                  <div
-                    key={i}
-                    className="flex-1 rounded-t-sm bg-primary/70"
-                    style={{ height: `${h}%`, opacity: 0.35 + i * 0.08 }}
-                  />
-                ))}
-              </div>
-              <div className="mt-6 grid gap-4 border-t border-border pt-6">
-                {stats.map((s) => (
-                  <div key={s.label} className="flex items-baseline justify-between">
-                    <span className="font-display text-2xl font-bold text-primary">{s.value}</span>
-                    <span className="text-xs text-muted-foreground">{s.label}</span>
-                  </div>
-                ))}
+
+              <div
+                className="rounded-2xl border border-border bg-card/80 p-6"
+                style={{ boxShadow: "var(--shadow-elegant)" }}
+              >
+                <div className="flex h-24 items-end gap-2.5">
+                  {[38, 55, 42, 72, 60, 85, 68, 96].map((h, i) => (
+                    <div
+                      key={i}
+                      className="flex-1 rounded-t-sm bg-primary/70"
+                      style={{ height: `${h}%`, opacity: 0.35 + i * 0.08 }}
+                    />
+                  ))}
+                </div>
+                <div className="mt-6 grid gap-4 border-t border-border pt-6">
+                  {stats.map((s) => (
+                    <div key={s.label} className="flex items-baseline justify-between">
+                      <span className="font-display text-2xl font-bold text-primary">
+                        {s.value}
+                      </span>
+                      <span className="text-xs text-muted-foreground">{s.label}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
