@@ -110,6 +110,9 @@ const projects = [
     tags: ["Python", "Advanced Excel", "EDA", "Dashboards"],
     link: GITHUB,
     bars: [45, 70, 38, 88, 60, 96, 52],
+    image: hotelDashboardAsset.url,
+    imageAlt:
+      "Hotel Booking Performance and Cancellation Analysis dashboard showing cancellation rate, booking value and monthly trend charts",
   },
   {
     title: "Sales Performance Analysis",
@@ -120,6 +123,9 @@ const projects = [
     tags: ["Python", "Excel", "Segmentation", "Retention"],
     link: GITHUB,
     bars: [30, 52, 64, 48, 82, 71, 94],
+    image: salesDashboardAsset.url,
+    imageAlt:
+      "Superstore Sales Performance dashboard with sales, profit, RFM score and regional performance charts",
   },
 ];
 
