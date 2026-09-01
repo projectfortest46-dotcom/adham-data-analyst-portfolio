@@ -156,3 +156,14 @@
     color: var(--color-foreground);
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@utility grid-motif {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--border) 60%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--border) 60%, transparent) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
