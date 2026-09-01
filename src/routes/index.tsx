@@ -349,18 +349,29 @@ function Index() {
             {projects.map((p) => (
               <article
                 key={p.title}
-                className="group flex flex-col rounded-xl border border-border bg-card p-7 transition-colors hover:border-primary/60"
+                className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-colors hover:border-primary/60"
               >
-                <div className="flex h-20 items-end gap-2">
-                  {p.bars.map((h, i) => (
-                    <div
-                      key={i}
-                      className="flex-1 rounded-t-sm bg-primary/40 transition-colors group-hover:bg-primary/70"
-                      style={{ height: `${h}%` }}
-                    />
-                  ))}
-                </div>
-                <div className="mt-6 flex items-baseline gap-2">
+                <a
+                  href={p.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="relative block overflow-hidden border-b border-border"
+                  aria-label={`${p.title} — view on GitHub`}
+                >
+                  <img
+                    src={p.image}
+                    alt={p.imageAlt}
+                    loading="lazy"
+                    className="aspect-[16/9] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card via-card/25 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-60" />
+                  <span className="pointer-events-none absolute right-4 top-4 inline-flex items-center gap-1 rounded-md border border-primary/40 bg-background/80 px-2.5 py-1 text-xs font-semibold text-primary opacity-0 backdrop-blur transition-opacity duration-300 group-hover:opacity-100">
+                    View dashboard <ArrowUpRight className="size-3.5" />
+                  </span>
+                </a>
+                <div className="flex flex-1 flex-col p-7">
+                <div className="flex items-baseline gap-2">
+
                   <span className="font-display text-2xl font-bold text-primary">{p.metric}</span>
                   <span className="text-xs uppercase tracking-wide text-muted-foreground">
                     {p.metricLabel}
