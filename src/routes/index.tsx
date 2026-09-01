@@ -448,15 +448,26 @@ function Index() {
         <section id="education" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
           <SectionHeading eyebrow="05 — Education" title="Education & certificates" />
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="rounded-xl border border-border bg-card p-7">
-              <GraduationCap className="size-6 text-primary" />
-              <h3 className="mt-4 font-display text-lg font-semibold">
-                Bachelor of Computing and Data Science
-              </h3>
-              <p className="mt-1 text-sm text-muted-foreground">Alexandria University</p>
-              <p className="mt-4 inline-block rounded-md bg-secondary px-3 py-1 text-xs font-semibold text-secondary-foreground">
-                Last GPA: 3.7 / 4.0
-              </p>
+            <div className="group overflow-hidden rounded-xl border border-border bg-card">
+              <div className="relative overflow-hidden border-b border-border">
+                <img
+                  src={universityAsset.url}
+                  alt="Faculty of Computing and Data Science building at Alexandria University"
+                  loading="lazy"
+                  className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+              </div>
+              <div className="p-7">
+                <GraduationCap className="size-6 text-primary" />
+                <h3 className="mt-4 font-display text-lg font-semibold">
+                  Bachelor of Computing and Data Science
+                </h3>
+                <p className="mt-1 text-sm text-muted-foreground">Alexandria University</p>
+                <p className="mt-4 inline-block rounded-md bg-secondary px-3 py-1 text-xs font-semibold text-secondary-foreground">
+                  Last GPA: 3.7 / 4.0
+                </p>
+              </div>
             </div>
             <div className="rounded-xl border border-border bg-card p-7">
               <Award className="size-6 text-primary" />
