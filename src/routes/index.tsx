@@ -370,36 +370,39 @@ function Index() {
                   </span>
                 </a>
                 <div className="flex flex-1 flex-col p-7">
-                <div className="flex items-baseline gap-2">
-
-                  <span className="font-display text-2xl font-bold text-primary">{p.metric}</span>
-                  <span className="text-xs uppercase tracking-wide text-muted-foreground">
-                    {p.metricLabel}
-                  </span>
+                  <div className="flex items-baseline gap-2">
+                    <span className="font-display text-2xl font-bold text-primary">
+                      {p.metric}
+                    </span>
+                    <span className="text-xs uppercase tracking-wide text-muted-foreground">
+                      {p.metricLabel}
+                    </span>
+                  </div>
+                  <h3 className="mt-3 font-display text-xl font-semibold">{p.title}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                    {p.description}
+                  </p>
+                  <ul className="mt-5 flex flex-wrap gap-2">
+                    {p.tags.map((t) => (
+                      <li
+                        key={t}
+                        className="rounded-md bg-secondary px-2.5 py-1 text-xs font-medium text-secondary-foreground"
+                      >
+                        {t}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+                  >
+                    View on GitHub <ArrowUpRight className="size-4" />
+                  </a>
                 </div>
-                <h3 className="mt-3 font-display text-xl font-semibold">{p.title}</h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                  {p.description}
-                </p>
-                <ul className="mt-5 flex flex-wrap gap-2">
-                  {p.tags.map((t) => (
-                    <li
-                      key={t}
-                      className="rounded-md bg-secondary px-2.5 py-1 text-xs font-medium text-secondary-foreground"
-                    >
-                      {t}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href={p.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
-                >
-                  View on GitHub <ArrowUpRight className="size-4" />
-                </a>
               </article>
+
             ))}
           </div>
         </section>
