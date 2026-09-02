@@ -52,7 +52,6 @@ const PHONE = "+20 1204068168";
 
 const navItems = [
   { label: "Workflow", href: "#workflow" },
-  { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
@@ -340,43 +339,10 @@ function Index() {
           </div>
         </section>
 
-        {/* About */}
-        <section id="about" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
-          <SectionHeading eyebrow="02 — About" title="Turning raw data into decisions" />
-          <div className="grid gap-6 md:grid-cols-3">
-            {[
-              {
-                icon: Database,
-                title: "Collect & Clean",
-                text: "Extract data from multiple sources, then clean and transform it into reliable, analysis-ready datasets.",
-              },
-              {
-                icon: LineChart,
-                title: "Analyze & Model",
-                text: "Run exploratory analysis with Python and SQL, build data models and surface the trends that matter.",
-              },
-              {
-                icon: BarChart3,
-                title: "Visualize & Report",
-                text: "Deliver interactive Power BI dashboards and KPI reports that make insights easy to act on.",
-              },
-            ].map((c) => (
-              <div
-                key={c.title}
-                className="rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/50"
-              >
-                <c.icon className="size-6 text-primary" />
-                <h3 className="mt-4 font-display text-lg font-semibold">{c.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.text}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Skills */}
         <section id="skills" className="border-y border-border bg-card/30">
           <div className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
-            <SectionHeading eyebrow="03 — Skills" title="Toolbox & capabilities" />
+            <SectionHeading eyebrow="02 — Skills" title="Toolbox & capabilities" />
             <div className="grid gap-6 md:grid-cols-3">
               {skillGroups.map((group) => (
                 <div key={group.title} className="rounded-xl border border-border bg-card p-6">
@@ -404,7 +370,7 @@ function Index() {
 
         {/* Projects */}
         <section id="projects" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
-          <SectionHeading eyebrow="04 — Projects" title="Selected analytics work" />
+          <SectionHeading eyebrow="03 — Projects" title="Selected analytics work" />
           <div className="grid gap-6 lg:grid-cols-2">
             {projects.map((p) => (
               <article
@@ -470,7 +436,7 @@ function Index() {
         {/* Experience */}
         <section id="experience" className="border-y border-border bg-card/30">
           <div className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
-            <SectionHeading eyebrow="05 — Experience" title="Experience & training" />
+            <SectionHeading eyebrow="04 — Experience" title="Experience & training" />
             <div className="rounded-xl border border-border bg-card p-7">
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div className="flex items-start gap-4">
@@ -506,7 +472,7 @@ function Index() {
 
         {/* Education */}
         <section id="education" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
-          <SectionHeading eyebrow="06 — Education" title="Education & certificates" />
+          <SectionHeading eyebrow="05 — Education" title="Education & certificates" />
           <div className="grid gap-6 md:grid-cols-2">
             <div className="group overflow-hidden rounded-xl border border-border bg-card">
               <div className="relative overflow-hidden border-b border-border">
