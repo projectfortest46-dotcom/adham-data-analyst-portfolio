@@ -17,11 +17,14 @@ import {
   Search,
   Sparkles,
   Target,
+  FileText,
+  Download,
 } from "lucide-react";
 import portraitAsset from "@/assets/adham-portrait.jpg.asset.json";
 import salesDashboardAsset from "@/assets/sales-dashboard.png.asset.json";
 import hotelDashboardAsset from "@/assets/hotel-dashboard.png.asset.json";
 import universityAsset from "@/assets/alexandria-university.jpg.asset.json";
+import cvAsset from "@/assets/adham-hany-cv.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -50,12 +53,15 @@ const LINKEDIN = "https://www.linkedin.com/in/adham-hany-mahmoud/";
 const GITHUB = "https://github.com/adhamhany794-maker";
 const PHONE = "+20 1204068168";
 
+const CV_URL = cvAsset.url;
+
 const navItems = [
   { label: "Workflow", href: "#workflow" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
   { label: "Education", href: "#education" },
+  { label: "Resume", href: "#resume" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -466,6 +472,14 @@ function Index() {
                   </li>
                 ))}
               </ul>
+              <a
+                href={CV_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+              >
+                <FileText className="size-4" /> View full experience in my CV
+              </a>
             </div>
           </div>
         </section>
@@ -505,7 +519,59 @@ function Index() {
               </p>
             </div>
           </div>
+          <a
+            href={CV_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+          >
+            <FileText className="size-4" /> See full education & certificates in my CV
+          </a>
         </section>
+
+        {/* Resume */}
+        <section id="resume" className="border-y border-border bg-card/30">
+          <div className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
+            <SectionHeading eyebrow="06 — Resume" title="Download my CV" />
+            <div className="grid items-center gap-8 rounded-xl border border-border bg-card p-7 md:grid-cols-[1fr_auto]">
+              <div className="flex items-start gap-4">
+                <span className="rounded-md bg-primary/10 p-3">
+                  <FileText className="size-6 text-primary" />
+                </span>
+                <div>
+                  <h3 className="font-display text-lg font-semibold">
+                    Adham Hany Mahmoud — Data Analyst CV
+                  </h3>
+                  <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
+                    A one-page PDF covering my technical toolbox, analytics projects, DEPI training
+                    experience, education and certificates — ready to share with recruiters.
+                  </p>
+                  <p className="mt-3 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                    PDF · Updated 2026
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href={CV_URL}
+                  download="Adham-Hany-Mahmoud-CV.pdf"
+                  className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+                >
+                  <Download className="size-4" /> Download CV
+                </a>
+                <a
+                  href={CV_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold transition-colors hover:border-primary/60 hover:text-primary"
+                >
+                  <ArrowUpRight className="size-4" /> View in browser
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
         {/* Contact */}
         <section
