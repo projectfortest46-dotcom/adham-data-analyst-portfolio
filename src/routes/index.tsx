@@ -318,6 +318,61 @@ function Index() {
           </div>
         </section>
 
+        {/* Workflow */}
+        <section id="workflow" className="border-y border-border bg-card/30">
+          <div className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
+            <SectionHeading eyebrow="02 — Workflow" title="From raw data to actionable insights" />
+            <div className="relative">
+              <div className="absolute inset-x-8 top-12 hidden h-0.5 bg-gradient-to-r from-primary/20 via-primary/60 to-primary/20 md:block" />
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                {[
+                  {
+                    step: "01",
+                    icon: Target,
+                    title: "Define the Problem",
+                    text: "Start by understanding business goals, KPIs, and the questions the data needs to answer.",
+                  },
+                  {
+                    step: "02",
+                    icon: Search,
+                    title: "Collect & Explore",
+                    text: "Gather data from multiple sources and run exploratory data analysis (EDA) to spot patterns.",
+                  },
+                  {
+                    step: "03",
+                    icon: Database,
+                    title: "Clean & Transform",
+                    text: "Handle missing values, fix inconsistencies, and shape data into reliable analysis-ready datasets.",
+                  },
+                  {
+                    step: "04",
+                    icon: Sparkles,
+                    title: "Analyze & Visualize",
+                    text: "Apply statistical analysis and build interactive dashboards that turn numbers into clear stories.",
+                  },
+                ].map((w, i) => (
+                  <div
+                    key={w.step}
+                    className="relative rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/50"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="rounded-md bg-primary/10 px-2 py-1 font-mono text-xs font-bold text-primary">
+                        {w.step}
+                      </span>
+                      {i < 3 && (
+                        <ArrowUpRight className="hidden size-4 text-primary/50 md:block" />
+                      )}
+                    </div>
+                    <w.icon className="mt-5 size-6 text-primary" />
+                    <h3 className="mt-4 font-display text-base font-semibold">{w.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{w.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Skills */}
         <section id="skills" className="border-y border-border bg-card/30">
           <div className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
