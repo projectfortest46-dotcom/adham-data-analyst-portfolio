@@ -339,43 +339,10 @@ function Index() {
           </div>
         </section>
 
-        {/* About */}
-        <section id="about" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
-          <SectionHeading eyebrow="02 — About" title="Turning raw data into decisions" />
-          <div className="grid gap-6 md:grid-cols-3">
-            {[
-              {
-                icon: Database,
-                title: "Collect & Clean",
-                text: "Extract data from multiple sources, then clean and transform it into reliable, analysis-ready datasets.",
-              },
-              {
-                icon: LineChart,
-                title: "Analyze & Model",
-                text: "Run exploratory analysis with Python and SQL, build data models and surface the trends that matter.",
-              },
-              {
-                icon: BarChart3,
-                title: "Visualize & Report",
-                text: "Deliver interactive Power BI dashboards and KPI reports that make insights easy to act on.",
-              },
-            ].map((c) => (
-              <div
-                key={c.title}
-                className="rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/50"
-              >
-                <c.icon className="size-6 text-primary" />
-                <h3 className="mt-4 font-display text-lg font-semibold">{c.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.text}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Skills */}
         <section id="skills" className="border-y border-border bg-card/30">
           <div className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
-            <SectionHeading eyebrow="03 — Skills" title="Toolbox & capabilities" />
+            <SectionHeading eyebrow="02 — Skills" title="Toolbox & capabilities" />
             <div className="grid gap-6 md:grid-cols-3">
               {skillGroups.map((group) => (
                 <div key={group.title} className="rounded-xl border border-border bg-card p-6">
