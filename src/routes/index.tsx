@@ -194,10 +194,21 @@ function Index() {
           <div className="pointer-events-none absolute inset-0 grid-motif opacity-40" />
           <div className="relative mx-auto grid max-w-6xl gap-12 px-5 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:py-28">
             <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-                <MapPin className="size-3.5" /> Alexandria, Egypt
-              </span>
-              <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-6xl">
+              <div className="mb-6 flex items-center gap-4">
+                <div className="flex size-16 items-center justify-center rounded-2xl border border-border bg-card p-2.5 shadow-sm sm:size-20">
+                  <img
+                    src="/logo.svg"
+                    alt="Adham Hany Mahmoud monogram logo"
+                    width={80}
+                    height={80}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+                <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                  <MapPin className="size-3.5" /> Alexandria, Egypt
+                </span>
+              </div>
+              <h1 className="font-display text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-6xl">
                 Adham Hany Mahmoud
               </h1>
               <p className="mt-3 font-display text-xl font-semibold text-primary sm:text-2xl">
