@@ -541,6 +541,12 @@ function Index() {
               >
                 <Github className="size-4" /> GitHub
               </a>
+              <a
+                href={`tel:${PHONE.replace(/\s/g, "")}`}
+                className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold transition-colors hover:border-primary/60 hover:text-primary"
+              >
+                <Phone className="size-4" /> {PHONE}
+              </a>
             </div>
           </div>
         </section>
