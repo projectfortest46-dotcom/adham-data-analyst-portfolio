@@ -370,7 +370,7 @@ function Index() {
 
         {/* Projects */}
         <section id="projects" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
-          <SectionHeading eyebrow="04 — Projects" title="Selected analytics work" />
+          <SectionHeading eyebrow="03 — Projects" title="Selected analytics work" />
           <div className="grid gap-6 lg:grid-cols-2">
             {projects.map((p) => (
               <article
@@ -436,7 +436,7 @@ function Index() {
         {/* Experience */}
         <section id="experience" className="border-y border-border bg-card/30">
           <div className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
-            <SectionHeading eyebrow="05 — Experience" title="Experience & training" />
+            <SectionHeading eyebrow="04 — Experience" title="Experience & training" />
             <div className="rounded-xl border border-border bg-card p-7">
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div className="flex items-start gap-4">
@@ -472,7 +472,7 @@ function Index() {
 
         {/* Education */}
         <section id="education" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
-          <SectionHeading eyebrow="06 — Education" title="Education & certificates" />
+          <SectionHeading eyebrow="05 — Education" title="Education & certificates" />
           <div className="grid gap-6 md:grid-cols-2">
             <div className="group overflow-hidden rounded-xl border border-border bg-card">
               <div className="relative overflow-hidden border-b border-border">
