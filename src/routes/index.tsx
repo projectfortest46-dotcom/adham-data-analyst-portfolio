@@ -13,6 +13,10 @@ import {
   Award,
   Briefcase,
   ArrowUpRight,
+  Workflow,
+  Search,
+  Sparkles,
+  Target,
 } from "lucide-react";
 import portraitAsset from "@/assets/adham-portrait.jpg.asset.json";
 import salesDashboardAsset from "@/assets/sales-dashboard.png.asset.json";
