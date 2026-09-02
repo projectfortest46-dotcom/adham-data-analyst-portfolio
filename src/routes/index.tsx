@@ -194,13 +194,13 @@ function Index() {
           <div className="pointer-events-none absolute inset-0 grid-motif opacity-40" />
           <div className="relative mx-auto grid max-w-6xl gap-12 px-5 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:py-28">
             <div>
-              <div className="mb-6 flex items-center gap-4">
-                <div className="flex size-16 items-center justify-center rounded-2xl border border-border bg-card p-2.5 shadow-sm sm:size-20">
+              <div className="mb-8 flex flex-wrap items-center gap-4">
+                <div className="flex size-20 items-center justify-center rounded-2xl border border-border bg-card p-3 shadow-sm sm:size-24">
                   <img
                     src="/logo.svg"
                     alt="Adham Hany Mahmoud monogram logo"
-                    width={80}
-                    height={80}
+                    width={96}
+                    height={96}
                     className="h-full w-full object-contain"
                   />
                 </div>
@@ -592,6 +592,15 @@ function Index() {
         >
           <div className="pointer-events-none absolute inset-0 grid-motif opacity-30" />
           <div className="relative mx-auto max-w-4xl px-5 py-24 text-center">
+            <div className="mx-auto mb-8 flex size-20 items-center justify-center rounded-2xl border border-border bg-card p-3 shadow-sm sm:size-24">
+              <img
+                src="/logo.svg"
+                alt="Adham Hany Mahmoud monogram logo"
+                width={96}
+                height={96}
+                className="h-full w-full object-contain"
+              />
+            </div>
             <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
               Let's connect and turn your data into actionable insights!
             </h2>
@@ -630,8 +639,19 @@ function Index() {
       </main>
 
       <footer className="border-t border-border bg-card/40">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-5 py-8 text-xs text-muted-foreground sm:flex-row">
-          <p>© {new Date().getFullYear()} Adham Hany Mahmoud · Data Analyst</p>
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 text-xs text-muted-foreground sm:flex-row">
+          <div className="flex items-center gap-3">
+            <div className="flex size-9 items-center justify-center rounded-lg border border-border bg-background p-1.5">
+              <img
+                src="/logo.svg"
+                alt="Adham Hany Mahmoud monogram logo"
+                width={36}
+                height={36}
+                className="h-full w-full object-contain"
+              />
+            </div>
+            <p>© {new Date().getFullYear()} Adham Hany Mahmoud · Data Analyst</p>
+          </div>
           <p className="flex items-center gap-1.5">
             <MapPin className="size-3.5" /> Alexandria, Egypt · {PHONE}
           </p>
