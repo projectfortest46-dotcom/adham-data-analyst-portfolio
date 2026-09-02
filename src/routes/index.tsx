@@ -639,8 +639,19 @@ function Index() {
       </main>
 
       <footer className="border-t border-border bg-card/40">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-5 py-8 text-xs text-muted-foreground sm:flex-row">
-          <p>© {new Date().getFullYear()} Adham Hany Mahmoud · Data Analyst</p>
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 text-xs text-muted-foreground sm:flex-row">
+          <div className="flex items-center gap-3">
+            <div className="flex size-9 items-center justify-center rounded-lg border border-border bg-background p-1.5">
+              <img
+                src="/logo.svg"
+                alt="Adham Hany Mahmoud monogram logo"
+                width={36}
+                height={36}
+                className="h-full w-full object-contain"
+              />
+            </div>
+            <p>© {new Date().getFullYear()} Adham Hany Mahmoud · Data Analyst</p>
+          </div>
           <p className="flex items-center gap-1.5">
             <MapPin className="size-3.5" /> Alexandria, Egypt · {PHONE}
           </p>
