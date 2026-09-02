@@ -51,8 +51,8 @@ const GITHUB = "https://github.com/adhamhany794-maker";
 const PHONE = "+20 1204068168";
 
 const navItems = [
-  { label: "About", href: "#about" },
   { label: "Workflow", href: "#workflow" },
+  { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
