@@ -211,8 +211,8 @@ function Index() {
                   <MapPin className="size-3.5" /> Alexandria, Egypt
                 </span>
               </div>
-              <h1 className="font-display text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-6xl">
-                Adham Hany Mahmoud
+              <h1 className="font-display text-3xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl">
+                Adham Hany
               </h1>
               <p className="mt-3 font-display text-xl font-semibold text-primary sm:text-2xl">
                 Data Analyst
@@ -619,12 +619,12 @@ function Index() {
         >
           <div className="pointer-events-none absolute inset-0 grid-motif opacity-30" />
           <div className="relative mx-auto max-w-4xl px-5 py-24 text-center">
-            <div className="mx-auto mb-8 flex size-28 items-center justify-center rounded-2xl border border-border bg-card p-3 shadow-sm sm:size-36">
+            <div className="mx-auto mb-8 flex size-32 items-center justify-center rounded-2xl border border-border bg-card p-3 shadow-sm sm:size-44">
               <img
                 src="/logo.svg"
                 alt="Adham Hany Mahmoud monogram logo"
-                width={144}
-                height={144}
+                width={176}
+                height={176}
                 className="h-full w-full object-contain"
               />
             </div>
@@ -671,12 +671,12 @@ function Index() {
       <footer className="border-t border-border bg-card/40">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 text-xs text-muted-foreground sm:flex-row">
           <div className="flex items-center gap-3">
-            <div className="flex size-9 items-center justify-center rounded-lg border border-border bg-background p-1.5">
+            <div className="flex size-12 items-center justify-center rounded-lg border border-border bg-background p-1.5 sm:size-14">
               <img
                 src="/logo.svg"
                 alt="Adham Hany Mahmoud monogram logo"
-                width={36}
-                height={36}
+                width={56}
+                height={56}
                 className="h-full w-full object-contain"
               />
             </div>
