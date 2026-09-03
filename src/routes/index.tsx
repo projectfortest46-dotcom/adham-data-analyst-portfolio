@@ -211,25 +211,31 @@ function Index() {
                   <MapPin className="size-3.5" /> Alexandria, Egypt
                 </span>
               </div>
-              <h1 className="font-display text-3xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl">
-                Adham Hany
+              <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-[-0.03em] sm:text-6xl">
+                <span className="bg-gradient-to-r from-foreground via-foreground to-primary bg-clip-text text-transparent">
+                  Adham Hany
+                </span>
               </h1>
-              <p className="mt-3 font-display text-xl font-semibold text-primary sm:text-2xl">
+              <p className="mt-4 font-display text-lg font-semibold uppercase tracking-[0.22em] text-primary sm:text-xl">
                 Data Analyst
               </p>
-              <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+              <p className="mt-6 max-w-2xl text-[0.95rem] leading-[1.85] text-muted-foreground sm:text-base">
                 Unlocking business growth by uncovering critical trends and mitigating losses to
                 drive efficiency and profitability, operating as a Data Science and Data Analysis
-                practitioner with a solid academic foundation and hands-on experience using Power
-                BI, Advanced Excel, Python, and SQL. Equipped with strong analytical,
-                critical-thinking, and effective communication skills to transform raw data into
-                cleaned datasets, interactive dashboards, and insightful reports driven by key KPIs.
+                practitioner with a solid academic foundation and hands-on experience using{" "}
+                <span className="font-semibold text-foreground">Power BI</span>,{" "}
+                <span className="font-semibold text-foreground">Advanced Excel</span>,{" "}
+                <span className="font-semibold text-foreground">Python</span>, and{" "}
+                <span className="font-semibold text-foreground">SQL</span>. Equipped with strong
+                analytical, critical-thinking, and effective communication skills to transform raw
+                data into cleaned datasets, interactive dashboards, and insightful reports driven by
+                key KPIs.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href={`mailto:${EMAIL}`}
-                  className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+                  className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold tracking-wide text-primary-foreground transition-opacity hover:opacity-90"
                 >
                   <Mail className="size-4" /> Email
                 </a>
@@ -237,7 +243,7 @@ function Index() {
                   href={LINKEDIN}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold transition-colors hover:border-primary/60 hover:text-primary"
+                  className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold tracking-wide transition-colors hover:border-primary/60 hover:text-primary"
                 >
                   <Linkedin className="size-4" /> LinkedIn
                 </a>
@@ -245,17 +251,74 @@ function Index() {
                   href={GITHUB}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold transition-colors hover:border-primary/60 hover:text-primary"
+                  className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold tracking-wide transition-colors hover:border-primary/60 hover:text-primary"
                 >
                   <Github className="size-4" /> GitHub
                 </a>
                 <a
-                  href={`tel:${PHONE.replace(/\s/g, "")}`}
-                  className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold transition-colors hover:border-primary/60 hover:text-primary"
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Chat on WhatsApp"
+                  className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold tracking-wide transition-colors hover:border-primary/60 hover:text-primary"
                 >
-                  <Phone className="size-4" /> {PHONE}
+                  <WhatsAppIcon className="size-4" /> {PHONE}
                 </a>
               </div>
+
+              {/* Toolbelt + quick highlights */}
+              <div className="mt-10 border-t border-border pt-8">
+                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+                  Toolbelt
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {["Power BI", "SQL", "Python", "Advanced Excel", "Pandas", "DAX", "Power Query"].map(
+                    (t) => (
+                      <span
+                        key={t}
+                        className="rounded-full border border-border bg-card/70 px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+                      >
+                        {t}
+                      </span>
+                    ),
+                  )}
+                </div>
+                <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                  {[
+                    { icon: Database, label: "Data Cleaning & Modeling" },
+                    { icon: BarChart3, label: "Interactive Dashboards" },
+                    { icon: LineChart, label: "KPI & Insight Reporting" },
+                  ].map((h) => (
+                    <div
+                      key={h.label}
+                      className="flex items-center gap-2.5 rounded-xl border border-border bg-card/60 px-3.5 py-3"
+                    >
+                      <h.icon className="size-4 shrink-0 text-primary" />
+                      <span className="text-xs font-medium leading-snug text-foreground">
+                        {h.label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6 flex flex-wrap items-center gap-3">
+                  <a
+                    href="#projects"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+                  >
+                    View projects <ArrowUpRight className="size-4" />
+                  </a>
+                  <span className="text-border">•</span>
+                  <a
+                    href={CV_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    <Download className="size-4" /> Download CV
+                  </a>
+                </div>
+              </div>
+
             </div>
 
             <div className="flex flex-col gap-6">
