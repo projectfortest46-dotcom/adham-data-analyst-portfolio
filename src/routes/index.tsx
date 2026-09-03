@@ -523,14 +523,38 @@ function Index() {
                 </p>
               </div>
             </div>
-            <div className="rounded-xl border border-border bg-card p-7">
-              <Award className="size-6 text-primary" />
-              <h3 className="mt-4 font-display text-lg font-semibold">IBM Data Fundamentals</h3>
-              <p className="mt-1 text-sm text-muted-foreground">IBM · Aug 2026</p>
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Covered Data Concepts, Data Science, Data Tools, Cleaning, Visualization, and IBM
-                Watson Studio.
-              </p>
+            <div className="group overflow-hidden rounded-xl border border-border bg-card">
+              <a
+                href={IBM_CERT_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="relative block overflow-hidden border-b border-border"
+              >
+                <img
+                  src={ibmCertificateAsset.url}
+                  alt="IBM Data Fundamentals certificate awarded to Adham Hany"
+                  loading="lazy"
+                  className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+              </a>
+              <div className="p-7">
+                <Award className="size-6 text-primary" />
+                <h3 className="mt-4 font-display text-lg font-semibold">IBM Data Fundamentals</h3>
+                <p className="mt-1 text-sm text-muted-foreground">IBM · Aug 2026</p>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                  Covered Data Concepts, Data Science, Data Tools, Cleaning, Visualization, and IBM
+                  Watson Studio.
+                </p>
+                <a
+                  href={IBM_CERT_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+                >
+                  Verify on Credly <ArrowUpRight className="size-4" />
+                </a>
+              </div>
             </div>
           </div>
           <a
