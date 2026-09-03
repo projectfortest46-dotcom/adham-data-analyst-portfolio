@@ -655,10 +655,13 @@ function Index() {
                 <Github className="size-4" /> GitHub
               </a>
               <a
-                href={`tel:${PHONE.replace(/\s/g, "")}`}
+                href={`https://wa.me/${PHONE.replace(/\s|+/g, "")}?text=Hi%20Adham`}
+                target="_blank"
+                rel="noreferrer"
+                title="Chat on WhatsApp (@Adham_Hany0_0)"
                 className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold transition-colors hover:border-primary/60 hover:text-primary"
               >
-                <Phone className="size-4" /> {PHONE}
+                <Phone className="size-4" /> WhatsApp
               </a>
             </div>
           </div>
