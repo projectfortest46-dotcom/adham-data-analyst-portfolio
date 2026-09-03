@@ -55,6 +55,8 @@ const GITHUB = "https://github.com/adhamhany794-maker";
 const PHONE = "+20 1204068168";
 
 const CV_URL = cvAsset.url;
+const IBM_CERT_URL =
+  "https://www.credly.com/badges/8e9fcbe6-c3f9-47c9-839d-6ffc838a3034/public_url";
 
 const navItems = [
   { label: "Workflow", href: "#workflow" },
