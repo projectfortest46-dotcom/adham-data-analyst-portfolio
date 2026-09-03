@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
 });
 
 const EMAIL = "adhamhany7771@gmail.com";
-const LINKEDIN = "https://www.linkedin.com/in/adham-hany-mahmoud/";
+const LINKEDIN = "https://linkedin.com/in/adham-hany-mahmoud/";
 const GITHUB = "https://github.com/adhamhany794-maker";
 const PHONE = "+20 1204068168";
 
