@@ -655,7 +655,7 @@ function Index() {
                 <Github className="size-4" /> GitHub
               </a>
               <a
-                href={`https://wa.me/${PHONE.replace(/\s|+/g, "")}?text=Hi%20Adham`}
+                href={`https://wa.me/${PHONE.replace(/[\s+]/g, "")}?text=Hi%20Adham`}
                 target="_blank"
                 rel="noreferrer"
                 title="Open WhatsApp chat (@Adham_Hany0_0)"
