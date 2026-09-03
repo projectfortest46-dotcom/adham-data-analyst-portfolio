@@ -25,6 +25,7 @@ import salesDashboardAsset from "@/assets/sales-dashboard.png.asset.json";
 import hotelDashboardAsset from "@/assets/hotel-dashboard.png.asset.json";
 import universityAsset from "@/assets/alexandria-university.jpg.asset.json";
 import cvAsset from "@/assets/adham-hany-cv.pdf.asset.json";
+import ibmCertificateAsset from "@/assets/ibm-data-fundamentals-certificate.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
