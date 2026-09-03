@@ -650,7 +650,7 @@ function Index() {
                 className="h-full w-full object-contain"
               />
             </div>
-            <p>© {new Date().getFullYear()} Adham Hany Mahmoud · Data Analyst</p>
+            <p className="text-[11px] sm:text-xs">© {new Date().getFullYear()} Adham Hany · Data Analyst</p>
           </div>
           <p className="flex items-center gap-1.5">
             <MapPin className="size-3.5" /> Alexandria, Egypt · {PHONE}
