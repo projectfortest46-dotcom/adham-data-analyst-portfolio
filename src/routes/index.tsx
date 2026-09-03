@@ -592,12 +592,12 @@ function Index() {
         >
           <div className="pointer-events-none absolute inset-0 grid-motif opacity-30" />
           <div className="relative mx-auto max-w-4xl px-5 py-24 text-center">
-            <div className="mx-auto mb-8 flex size-20 items-center justify-center rounded-2xl border border-border bg-card p-3 shadow-sm sm:size-24">
+            <div className="mx-auto mb-8 flex size-28 items-center justify-center rounded-2xl border border-border bg-card p-3 shadow-sm sm:size-36">
               <img
                 src="/logo.svg"
                 alt="Adham Hany Mahmoud monogram logo"
-                width={96}
-                height={96}
+                width={144}
+                height={144}
                 className="h-full w-full object-contain"
               />
             </div>
@@ -650,7 +650,7 @@ function Index() {
                 className="h-full w-full object-contain"
               />
             </div>
-            <p>© {new Date().getFullYear()} Adham Hany Mahmoud · Data Analyst</p>
+            <p className="text-[11px] sm:text-xs">© {new Date().getFullYear()} Adham Hany · Data Analyst</p>
           </div>
           <p className="flex items-center gap-1.5">
             <MapPin className="size-3.5" /> Alexandria, Egypt · {PHONE}
