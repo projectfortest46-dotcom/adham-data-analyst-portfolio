@@ -151,10 +151,11 @@ const projects = [
 ];
 
 const stats = [
-  { value: "128K+", label: "Records analyzed" },
-  { value: "10+", label: "Tools & technologies" },
-  { value: "3.7/4.0", label: "Academic GPA" },
+  { value: "128K+", label: "Records analyzed across projects", icon: Database },
+  { value: "10+", label: "Tools & technologies in daily use", icon: BarChart3 },
+  { value: "3.7 / 4.0", label: "Academic GPA, Alexandria University", icon: GraduationCap },
 ];
+
 
 function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) {
   return (
