@@ -175,8 +175,16 @@ function Index() {
     <div className="min-h-screen bg-background font-sans text-foreground">
       <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
-          <a href="#top" className="font-display text-sm font-bold tracking-tight">
-            Adham<span className="text-primary">.</span>
+          <a href="#top" className="flex items-center gap-2" aria-label="Back to top">
+            <div className="flex size-9 items-center justify-center rounded-xl border border-border bg-card p-1.5 shadow-sm">
+              <img
+                src="/logo.svg"
+                alt="Adham Hany Mahmoud monogram logo"
+                width={28}
+                height={28}
+                className="h-full w-full object-contain"
+              />
+            </div>
           </a>
           <ul className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">
             {navItems.map((item) => (
@@ -187,12 +195,22 @@ function Index() {
               </li>
             ))}
           </ul>
-          <a
-            href={`mailto:${EMAIL}`}
-            className="rounded-md bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Hire me
-          </a>
+          <div className="flex items-center gap-2">
+            <a
+              href={CV_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-md border border-border bg-card px-3 py-2 text-xs font-semibold text-foreground transition-colors hover:border-primary/60 hover:text-primary"
+            >
+              Resume
+            </a>
+            <a
+              href={`mailto:${EMAIL}`}
+              className="rounded-md bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              Hire me
+            </a>
+          </div>
         </nav>
       </header>
 
