@@ -158,7 +158,7 @@ const stats = [
 
 function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) {
   return (
-    <div className="mb-10">
+    <div className="mb-8">
       <p className="mb-2 font-mono text-xs font-semibold uppercase tracking-[0.25em] text-primary">
         {eyebrow}
       </p>
@@ -221,7 +221,8 @@ function Index() {
           style={{ backgroundImage: "var(--gradient-hero)" }}
         >
           <div className="pointer-events-none absolute inset-0 grid-motif opacity-40" />
-          <div className="relative mx-auto grid max-w-6xl gap-12 px-5 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:py-28">
+          <div className="relative mx-auto grid max-w-6xl gap-10 px-5 py-16 lg:grid-cols-[1.15fr_0.85fr] lg:py-24">
+
             <div>
               <div className="mb-8 flex flex-wrap items-center gap-4">
                 <div className="flex size-20 items-center justify-center rounded-2xl border border-border bg-card p-3 shadow-sm sm:size-24">
@@ -258,42 +259,9 @@ function Index() {
                 key KPIs.
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a
-                  href={`mailto:${EMAIL}`}
-                  className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold tracking-wide text-primary-foreground transition-opacity hover:opacity-90"
-                >
-                  <Mail className="size-4" /> Email
-                </a>
-                <a
-                  href={LINKEDIN}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold tracking-wide transition-colors hover:border-primary/60 hover:text-primary"
-                >
-                  <Linkedin className="size-4" /> LinkedIn
-                </a>
-                <a
-                  href={GITHUB}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold tracking-wide transition-colors hover:border-primary/60 hover:text-primary"
-                >
-                  <Github className="size-4" /> GitHub
-                </a>
-                <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  title="Chat on WhatsApp"
-                  className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold tracking-wide transition-colors hover:border-primary/60 hover:text-primary"
-                >
-                  <WhatsAppIcon className="size-4" /> {PHONE}
-                </a>
-              </div>
 
               {/* Toolbelt + quick highlights */}
-              <div className="mt-10 border-t border-border pt-8">
+              <div className="mt-8 border-t border-border pt-6">
                 <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-muted-foreground">
                   Toolbelt
                 </p>
@@ -309,7 +277,7 @@ function Index() {
                     ),
                   )}
                 </div>
-                <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                <div className="mt-5 grid gap-3 sm:grid-cols-3">
                   {[
                     { icon: Database, label: "Data Cleaning & Modeling" },
                     { icon: BarChart3, label: "Interactive Dashboards" },
@@ -326,7 +294,7 @@ function Index() {
                     </div>
                   ))}
                 </div>
-                <div className="mt-6 flex flex-wrap items-center gap-3">
+                <div className="mt-5 flex flex-wrap items-center gap-3">
                   <a
                     href="#projects"
                     className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
@@ -344,6 +312,7 @@ function Index() {
                   </a>
                 </div>
               </div>
+
 
             </div>
 
@@ -395,7 +364,8 @@ function Index() {
 
         {/* Workflow */}
         <section id="workflow" className="border-y border-border bg-card/30">
-          <div className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
+          <div className="mx-auto max-w-6xl scroll-mt-20 px-5 py-16">
+
             <SectionHeading eyebrow="01 — Workflow" title="From raw data to actionable insights" />
             <div className="relative">
               <div className="absolute inset-x-8 top-12 hidden h-0.5 bg-gradient-to-r from-primary/20 via-primary/60 to-primary/20 md:block" />
@@ -450,7 +420,8 @@ function Index() {
 
         {/* Skills */}
         <section id="skills" className="border-y border-border bg-card/30">
-          <div className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
+          <div className="mx-auto max-w-6xl scroll-mt-20 px-5 py-16">
+
             <SectionHeading eyebrow="02 — Skills" title="Toolbox & capabilities" />
             <div className="grid gap-6 md:grid-cols-3">
               {skillGroups.map((group) => (
@@ -478,7 +449,8 @@ function Index() {
         </section>
 
         {/* Projects */}
-        <section id="projects" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
+        <section id="projects" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-16">
+
           <SectionHeading eyebrow="03 — Projects" title="Selected analytics work" />
           <div className="grid gap-6 lg:grid-cols-2">
             {projects.map((p) => (
@@ -544,7 +516,8 @@ function Index() {
 
         {/* Experience */}
         <section id="experience" className="border-y border-border bg-card/30">
-          <div className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
+          <div className="mx-auto max-w-6xl scroll-mt-20 px-5 py-16">
+
             <SectionHeading eyebrow="04 — Experience" title="Experience & training" />
             <div className="rounded-xl border border-border bg-card p-7">
               <div className="flex flex-wrap items-start justify-between gap-3">
@@ -588,7 +561,8 @@ function Index() {
         </section>
 
         {/* Education */}
-        <section id="education" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
+        <section id="education" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-16">
+
           <SectionHeading eyebrow="05 — Education" title="Education & certificates" />
           <div className="grid gap-6 md:grid-cols-2">
             <div className="group overflow-hidden rounded-xl border border-border bg-card">
@@ -658,7 +632,8 @@ function Index() {
 
         {/* Resume */}
         <section id="resume" className="border-y border-border bg-card/30">
-          <div className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
+          <div className="mx-auto max-w-6xl scroll-mt-20 px-5 py-16">
+
             <SectionHeading eyebrow="06 — Resume" title="Download my CV" />
             <div className="grid items-center gap-8 rounded-xl border border-border bg-card p-7 md:grid-cols-[1fr_auto]">
               <div className="flex items-start gap-4">
@@ -707,7 +682,8 @@ function Index() {
           style={{ backgroundImage: "var(--gradient-hero)" }}
         >
           <div className="pointer-events-none absolute inset-0 grid-motif opacity-30" />
-          <div className="relative mx-auto max-w-4xl px-5 py-24 text-center">
+          <div className="relative mx-auto max-w-4xl px-5 py-20 text-center">
+
             <div className="mx-auto mb-8 flex size-32 items-center justify-center rounded-2xl border border-border bg-card p-3 shadow-sm sm:size-44">
               <img
                 src="/logo.svg"
