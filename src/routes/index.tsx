@@ -133,7 +133,7 @@ const projects = [
     description:
       "Analyzed 119K+ hotel booking records trends and cancellation patterns using Python and Advanced Excel. Identified key factors contributing to booking cancellations, highlighted seasonal demand spikes, and created visual dashboards to summarize overall performance and lower cancellation risks.",
     tags: ["Python", "Advanced Excel", "EDA", "Dashboards"],
-    link: GITHUB,
+    link: HOTEL_REPO,
     bars: [45, 70, 38, 88, 60, 96, 52],
     image: hotelDashboardAsset.url,
     imageAlt:
@@ -146,7 +146,7 @@ const projects = [
     description:
       "Evaluated 9,000+ sales order records to track revenue growth and segment customer purchasing behaviors. Cleaned raw datasets, performed exploratory data analysis (EDA) using Python and Excel, and uncovered key customer retention insights to support target marketing strategies.",
     tags: ["Python", "Excel", "Segmentation", "Retention"],
-    link: GITHUB,
+    link: SALES_REPO,
     bars: [30, 52, 64, 48, 82, 71, 94],
     image: salesDashboardAsset.url,
     imageAlt:
