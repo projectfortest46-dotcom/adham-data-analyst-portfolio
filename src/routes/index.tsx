@@ -251,18 +251,26 @@ function Index() {
               <p className="mt-4 font-display text-lg font-semibold uppercase tracking-[0.22em] text-primary sm:text-xl">
                 Data Analyst
               </p>
-              <p className="mt-6 max-w-2xl text-[0.95rem] leading-[1.85] text-muted-foreground sm:text-base">
-                Unlocking business growth by uncovering critical trends and mitigating losses to
-                drive efficiency and profitability, operating as a Data Science and Data Analysis
-                practitioner with a solid academic foundation and hands-on experience using{" "}
-                <span className="font-semibold text-foreground">Power BI</span>,{" "}
-                <span className="font-semibold text-foreground">Advanced Excel</span>,{" "}
-                <span className="font-semibold text-foreground">Python</span>, and{" "}
-                <span className="font-semibold text-foreground">SQL</span>. Equipped with strong
-                analytical, critical-thinking, and effective communication skills to transform raw
-                data into cleaned datasets, interactive dashboards, and insightful reports driven by
-                key KPIs.
-              </p>
+              <div className="mt-7 max-w-2xl space-y-4 border-l-2 border-primary/40 pl-5">
+                <p className="text-base leading-8 text-foreground/90 sm:text-[1.0625rem]">
+                  I help businesses grow by uncovering critical trends and mitigating losses to
+                  drive efficiency and profitability.
+                </p>
+                <p className="text-[0.95rem] leading-8 text-muted-foreground sm:text-base">
+                  A Data Science and Data Analysis practitioner with a solid academic foundation and
+                  hands-on experience using{" "}
+                  <span className="font-semibold text-foreground">Power BI</span>,{" "}
+                  <span className="font-semibold text-foreground">Advanced Excel</span>,{" "}
+                  <span className="font-semibold text-foreground">Python</span>, and{" "}
+                  <span className="font-semibold text-foreground">SQL</span>.
+                </p>
+                <p className="text-[0.95rem] leading-8 text-muted-foreground sm:text-base">
+                  Strong analytical, critical-thinking, and communication skills to transform raw
+                  data into cleaned datasets, interactive dashboards, and insightful reports driven
+                  by key KPIs.
+                </p>
+              </div>
+
 
 
               {/* Toolbelt + quick highlights */}
