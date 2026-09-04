@@ -51,6 +51,10 @@ export const Route = createFileRoute("/")({
 const EMAIL = "adhamhany7771@gmail.com";
 const LINKEDIN = "https://linkedin.com/in/adham-hany-mahmoud/";
 const GITHUB = "https://github.com/adhamhany794-maker";
+const HOTEL_REPO =
+  "https://github.com/adhamhany794-maker/Hotel-Booking-Performance-Cancellation-Analysis";
+const SALES_REPO = "https://github.com/adhamhany794-maker/superstore-sales-profit-analysis";
+
 const PHONE = "+20 1204068168";
 const WHATSAPP_URL = `https://wa.me/${PHONE.replace(/[\s+]/g, "")}?text=Hi%20Adham`;
 
@@ -129,7 +133,7 @@ const projects = [
     description:
       "Analyzed 119K+ hotel booking records trends and cancellation patterns using Python and Advanced Excel. Identified key factors contributing to booking cancellations, highlighted seasonal demand spikes, and created visual dashboards to summarize overall performance and lower cancellation risks.",
     tags: ["Python", "Advanced Excel", "EDA", "Dashboards"],
-    link: GITHUB,
+    link: HOTEL_REPO,
     bars: [45, 70, 38, 88, 60, 96, 52],
     image: hotelDashboardAsset.url,
     imageAlt:
@@ -142,7 +146,7 @@ const projects = [
     description:
       "Evaluated 9,000+ sales order records to track revenue growth and segment customer purchasing behaviors. Cleaned raw datasets, performed exploratory data analysis (EDA) using Python and Excel, and uncovered key customer retention insights to support target marketing strategies.",
     tags: ["Python", "Excel", "Segmentation", "Retention"],
-    link: GITHUB,
+    link: SALES_REPO,
     bars: [30, 52, 64, 48, 82, 71, 94],
     image: salesDashboardAsset.url,
     imageAlt:
@@ -151,10 +155,11 @@ const projects = [
 ];
 
 const stats = [
-  { value: "128K+", label: "Records analyzed" },
-  { value: "10+", label: "Tools & technologies" },
-  { value: "3.7/4.0", label: "Academic GPA" },
+  { value: "128K+", label: "Records analyzed across projects", icon: Database },
+  { value: "10+", label: "Tools & technologies in daily use", icon: BarChart3 },
+  { value: "3.7 / 4.0", label: "Academic GPA, Alexandria University", icon: GraduationCap },
 ];
+
 
 function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) {
   return (
@@ -246,18 +251,26 @@ function Index() {
               <p className="mt-4 font-display text-lg font-semibold uppercase tracking-[0.22em] text-primary sm:text-xl">
                 Data Analyst
               </p>
-              <p className="mt-6 max-w-2xl text-[0.95rem] leading-[1.85] text-muted-foreground sm:text-base">
-                Unlocking business growth by uncovering critical trends and mitigating losses to
-                drive efficiency and profitability, operating as a Data Science and Data Analysis
-                practitioner with a solid academic foundation and hands-on experience using{" "}
-                <span className="font-semibold text-foreground">Power BI</span>,{" "}
-                <span className="font-semibold text-foreground">Advanced Excel</span>,{" "}
-                <span className="font-semibold text-foreground">Python</span>, and{" "}
-                <span className="font-semibold text-foreground">SQL</span>. Equipped with strong
-                analytical, critical-thinking, and effective communication skills to transform raw
-                data into cleaned datasets, interactive dashboards, and insightful reports driven by
-                key KPIs.
-              </p>
+              <div className="mt-7 max-w-2xl space-y-4 border-l-2 border-primary/40 pl-5">
+                <p className="text-base leading-8 text-foreground/90 sm:text-[1.0625rem]">
+                  I help businesses grow by uncovering critical trends and mitigating losses to
+                  drive efficiency and profitability.
+                </p>
+                <p className="text-[0.95rem] leading-8 text-muted-foreground sm:text-base">
+                  A Data Science and Data Analysis practitioner with a solid academic foundation and
+                  hands-on experience using{" "}
+                  <span className="font-semibold text-foreground">Power BI</span>,{" "}
+                  <span className="font-semibold text-foreground">Advanced Excel</span>,{" "}
+                  <span className="font-semibold text-foreground">Python</span>, and{" "}
+                  <span className="font-semibold text-foreground">SQL</span>.
+                </p>
+                <p className="text-[0.95rem] leading-8 text-muted-foreground sm:text-base">
+                  Strong analytical, critical-thinking, and communication skills to transform raw
+                  data into cleaned datasets, interactive dashboards, and insightful reports driven
+                  by key KPIs.
+                </p>
+              </div>
+
 
 
               {/* Toolbelt + quick highlights */}
@@ -338,26 +351,29 @@ function Index() {
                 className="rounded-2xl border border-border bg-card/80 p-6"
                 style={{ boxShadow: "var(--shadow-elegant)" }}
               >
-                <div className="flex h-24 items-end gap-2.5">
-                  {[38, 55, 42, 72, 60, 85, 68, 96].map((h, i) => (
-                    <div
-                      key={i}
-                      className="flex-1 rounded-t-sm bg-primary/70"
-                      style={{ height: `${h}%`, opacity: 0.35 + i * 0.08 }}
-                    />
-                  ))}
-                </div>
-                <div className="mt-6 grid gap-4 border-t border-border pt-6">
+                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+                  At a glance
+                </p>
+                <div className="mt-5 grid gap-3">
                   {stats.map((s) => (
-                    <div key={s.label} className="flex items-baseline justify-between">
-                      <span className="font-display text-2xl font-bold text-primary">
-                        {s.value}
-                      </span>
-                      <span className="text-xs text-muted-foreground">{s.label}</span>
+                    <div
+                      key={s.label}
+                      className="flex items-center gap-3 rounded-xl border border-border bg-background/40 px-4 py-3.5"
+                    >
+                      <s.icon className="size-4 shrink-0 text-primary" />
+                      <div className="min-w-0">
+                        <p className="font-display text-xl font-bold leading-none text-foreground">
+                          {s.value}
+                        </p>
+                        <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
+                          {s.label}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>
               </div>
+
             </div>
           </div>
         </section>
