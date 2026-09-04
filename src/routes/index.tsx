@@ -3,7 +3,6 @@ import {
   Mail,
   Linkedin,
   Github,
-  Phone,
   MapPin,
   BarChart3,
   Database,
@@ -727,13 +726,13 @@ function Index() {
                 <Github className="size-4" /> GitHub
               </a>
               <a
-                href={`https://wa.me/${PHONE.replace(/[\s+]/g, "")}?text=Hi%20Adham`}
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
                 title="Open WhatsApp chat (@Adham_Hany0_0)"
                 className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold transition-colors hover:border-primary/60 hover:text-primary"
               >
-                <Phone className="size-4" /> {PHONE}
+                <WhatsAppIcon className="size-4" /> {PHONE}
               </a>
             </div>
           </div>
