@@ -338,26 +338,29 @@ function Index() {
                 className="rounded-2xl border border-border bg-card/80 p-6"
                 style={{ boxShadow: "var(--shadow-elegant)" }}
               >
-                <div className="flex h-24 items-end gap-2.5">
-                  {[38, 55, 42, 72, 60, 85, 68, 96].map((h, i) => (
-                    <div
-                      key={i}
-                      className="flex-1 rounded-t-sm bg-primary/70"
-                      style={{ height: `${h}%`, opacity: 0.35 + i * 0.08 }}
-                    />
-                  ))}
-                </div>
-                <div className="mt-6 grid gap-4 border-t border-border pt-6">
+                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+                  At a glance
+                </p>
+                <div className="mt-5 grid gap-3">
                   {stats.map((s) => (
-                    <div key={s.label} className="flex items-baseline justify-between">
-                      <span className="font-display text-2xl font-bold text-primary">
-                        {s.value}
-                      </span>
-                      <span className="text-xs text-muted-foreground">{s.label}</span>
+                    <div
+                      key={s.label}
+                      className="flex items-center gap-3 rounded-xl border border-border bg-background/40 px-4 py-3.5"
+                    >
+                      <s.icon className="size-4 shrink-0 text-primary" />
+                      <div className="min-w-0">
+                        <p className="font-display text-xl font-bold leading-none text-foreground">
+                          {s.value}
+                        </p>
+                        <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
+                          {s.label}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>
               </div>
+
             </div>
           </div>
         </section>
