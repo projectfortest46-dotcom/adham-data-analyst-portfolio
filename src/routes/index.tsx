@@ -51,6 +51,10 @@ export const Route = createFileRoute("/")({
 const EMAIL = "adhamhany7771@gmail.com";
 const LINKEDIN = "https://linkedin.com/in/adham-hany-mahmoud/";
 const GITHUB = "https://github.com/adhamhany794-maker";
+const HOTEL_REPO =
+  "https://github.com/adhamhany794-maker/Hotel-Booking-Performance-Cancellation-Analysis";
+const SALES_REPO = "https://github.com/adhamhany794-maker/superstore-sales-profit-analysis";
+
 const PHONE = "+20 1204068168";
 const WHATSAPP_URL = `https://wa.me/${PHONE.replace(/[\s+]/g, "")}?text=Hi%20Adham`;
 
