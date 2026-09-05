@@ -131,7 +131,7 @@ const projects = [
     metric: "119K+",
     metricLabel: "booking records analyzed",
     description:
-      "Analyzed 119K+ hotel booking records trends and cancellation patterns using Python and Advanced Excel. Identified key factors contributing to booking cancellations, highlighted seasonal demand spikes, and created visual dashboards to summarize overall performance and lower cancellation risks.",
+      "Dug into booking and cancellation trends with Python and Advanced Excel, pinpointed the main drivers of cancellations and seasonal demand spikes, then summarized it all in clear dashboards built to lower cancellation risk.",
     tags: ["Python", "Advanced Excel", "EDA", "Dashboards"],
     link: HOTEL_REPO,
     bars: [45, 70, 38, 88, 60, 96, 52],
@@ -144,7 +144,7 @@ const projects = [
     metric: "9,000+",
     metricLabel: "sales orders evaluated",
     description:
-      "Evaluated 9,000+ sales order records to track revenue growth and segment customer purchasing behaviors. Cleaned raw datasets, performed exploratory data analysis (EDA) using Python and Excel, and uncovered key customer retention insights to support target marketing strategies.",
+      "Tracked revenue growth and customer buying behavior, cleaned the raw data with Python and Excel, and surfaced retention insights that support more targeted marketing.",
     tags: ["Python", "Excel", "Segmentation", "Retention"],
     link: SALES_REPO,
     bars: [30, 52, 64, 48, 82, 71, 94],
@@ -426,7 +426,7 @@ function Index() {
                     </div>
                     <w.icon className="mt-5 size-6 text-primary" />
                     <h3 className="mt-4 font-display text-base font-semibold">{w.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{w.text}</p>
+                    <p className="mt-2 text-sm leading-7 text-muted-foreground">{w.text}</p>
                   </div>
                 ))}
               </div>
@@ -502,7 +502,7 @@ function Index() {
                     </span>
                   </div>
                   <h3 className="mt-3 font-display text-xl font-semibold">{p.title}</h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  <p className="mt-3 flex-1 text-[0.95rem] leading-8 text-muted-foreground">
                     {p.description}
                   </p>
                   <ul className="mt-5 flex flex-wrap gap-2">
@@ -621,7 +621,7 @@ function Index() {
                 <Award className="size-6 text-primary" />
                 <h3 className="mt-4 font-display text-lg font-semibold">IBM Data Fundamentals</h3>
                 <p className="mt-1 text-sm text-muted-foreground">IBM · Aug 2026</p>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-4 text-[0.95rem] leading-8 text-muted-foreground">
                   Covered Data Concepts, Data Science, Data Tools, Cleaning, Visualization, and IBM
                   Watson Studio.
                 </p>
@@ -660,7 +660,7 @@ function Index() {
                   <h3 className="font-display text-lg font-semibold">
                     Adham Hany Mahmoud — Data Analyst CV
                   </h3>
-                  <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
+                  <p className="mt-2 max-w-xl text-[0.95rem] leading-8 text-muted-foreground">
                     A one-page PDF covering my technical toolbox, analytics projects, DEPI training
                     experience, education and certificates — ready to share with recruiters.
                   </p>
