@@ -145,7 +145,7 @@ const projects = [
     metricLabel: "sales orders evaluated",
     description:
       "Tracked revenue growth and customer buying behavior, cleaned the raw data with Python and Excel, and surfaced retention insights that support more targeted marketing.",
-    tags: ["Python", "Excel", "Segmentation", "Retention"],
+    tags: ["Python", "Advanced Excel", "EDA", "Dashboards"],
     link: SALES_REPO,
     bars: [30, 52, 64, 48, 82, 71, 94],
     image: salesDashboardAsset.url,
@@ -317,8 +317,7 @@ function Index() {
                   <span className="text-border">•</span>
                   <a
                     href={CV_URL}
-                    target="_blank"
-                    rel="noreferrer"
+                    download="Adham-Hany-CV.pdf"
                     className="inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground transition-colors hover:text-primary"
                   >
                     <Download className="size-4" /> Download CV
