@@ -16,14 +16,11 @@ import {
   Search,
   Sparkles,
   Target,
-  FileText,
-  Download,
 } from "lucide-react";
 import portraitAsset from "@/assets/adham-portrait.jpg.asset.json";
 import salesDashboardAsset from "@/assets/sales-dashboard.png.asset.json";
 import hotelDashboardAsset from "@/assets/hotel-dashboard.png.asset.json";
 import universityAsset from "@/assets/alexandria-university.jpg.asset.json";
-import cvAsset from "@/assets/adham-hany-cv.pdf.asset.json";
 import ibmCertificateAsset from "@/assets/ibm-data-fundamentals-certificate.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -66,7 +63,6 @@ function WhatsAppIcon({ className }: { className?: string }) {
   );
 }
 
-const CV_URL = cvAsset.url;
 const IBM_CERT_URL =
   "https://www.credly.com/badges/8e9fcbe6-c3f9-47c9-839d-6ffc838a3034/public_url";
 
@@ -76,7 +72,6 @@ const navItems = [
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
   { label: "Education", href: "#education" },
-  { label: "Resume", href: "#resume" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -155,7 +150,7 @@ const projects = [
 ];
 
 const stats = [
-  { value: "128K+", label: "Records analyzed across projects", icon: Database },
+  { value: "2+", label: "Analytics projects delivered", icon: Briefcase },
   { value: "10+", label: "Tools & technologies in daily use", icon: BarChart3 },
   { value: "3.7 / 4.0", label: "Academic GPA, Alexandria University", icon: GraduationCap },
 ];
@@ -200,22 +195,12 @@ function Index() {
               </li>
             ))}
           </ul>
-          <div className="flex items-center gap-2">
-            <a
-              href={CV_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-md border border-border bg-card px-3 py-2 text-xs font-semibold text-foreground transition-colors hover:border-primary/60 hover:text-primary"
-            >
-              Resume
-            </a>
-            <a
-              href={`mailto:${EMAIL}`}
-              className="rounded-md bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-            >
-              Hire me
-            </a>
-          </div>
+          <a
+            href={`mailto:${EMAIL}`}
+            className="rounded-md bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+          >
+            Hire me
+          </a>
         </nav>
       </header>
 
@@ -273,56 +258,47 @@ function Index() {
 
 
 
-              {/* Toolbelt + quick highlights */}
+              {/* Services */}
               <div className="mt-8 border-t border-border pt-6">
                 <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-muted-foreground">
-                  Toolbelt
+                  Services
                 </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {["Power BI", "SQL", "Python", "Advanced Excel", "Pandas", "DAX", "Power Query"].map(
-                    (t) => (
-                      <span
-                        key={t}
-                        className="rounded-full border border-border bg-card/70 px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
-                      >
-                        {t}
-                      </span>
-                    ),
-                  )}
-                </div>
-                <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                <div className="mt-4 grid gap-3 sm:grid-cols-3">
                   {[
-                    { icon: Database, label: "Data Cleaning & Modeling" },
-                    { icon: BarChart3, label: "Interactive Dashboards" },
-                    { icon: LineChart, label: "KPI & Insight Reporting" },
-                  ].map((h) => (
+                    {
+                      icon: Database,
+                      title: "Data Cleaning & Modeling",
+                      text: "Structure and clean raw data so it is ready for reliable analysis.",
+                    },
+                    {
+                      icon: BarChart3,
+                      title: "Interactive Dashboards",
+                      text: "Build clear Power BI dashboards that make metrics easy to explore.",
+                    },
+                    {
+                      icon: LineChart,
+                      title: "KPI & Insight Reporting",
+                      text: "Track the numbers that matter and turn them into actionable insights.",
+                    },
+                  ].map((s) => (
                     <div
-                      key={h.label}
-                      className="flex items-center gap-2.5 rounded-xl border border-border bg-card/60 px-3.5 py-3"
+                      key={s.title}
+                      className="rounded-xl border border-border bg-card/60 p-4 transition-colors hover:border-primary/50"
                     >
-                      <h.icon className="size-4 shrink-0 text-primary" />
-                      <span className="text-xs font-medium leading-snug text-foreground">
-                        {h.label}
-                      </span>
+                      <s.icon className="size-5 text-primary" />
+                      <h4 className="mt-3 text-sm font-semibold text-foreground">{s.title}</h4>
+                      <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
+                        {s.text}
+                      </p>
                     </div>
                   ))}
                 </div>
-                <div className="mt-5 flex flex-wrap items-center gap-3">
-                  <a
-                    href="#projects"
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
-                  >
-                    View projects <ArrowUpRight className="size-4" />
-                  </a>
-                  <span className="text-border">•</span>
-                  <a
-                    href={CV_URL}
-                    download="Adham-Hany-CV.pdf"
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    <Download className="size-4" /> Download CV
-                  </a>
-                </div>
+                <a
+                  href="#projects"
+                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+                >
+                  View projects <ArrowUpRight className="size-4" />
+                </a>
               </div>
 
 
@@ -351,7 +327,7 @@ function Index() {
                 style={{ boxShadow: "var(--shadow-elegant)" }}
               >
                 <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-muted-foreground">
-                  At a glance
+                  Quick highlights
                 </p>
                 <div className="mt-5 grid gap-3">
                   {stats.map((s) => (
@@ -563,14 +539,6 @@ function Index() {
                   </li>
                 ))}
               </ul>
-              <a
-                href={CV_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
-              >
-                <FileText className="size-4" /> View full experience in my CV
-              </a>
             </div>
           </div>
         </section>
@@ -635,60 +603,7 @@ function Index() {
               </div>
             </div>
           </div>
-          <a
-            href={CV_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
-          >
-            <FileText className="size-4" /> See full education & certificates in my CV
-          </a>
         </section>
-
-        {/* Resume */}
-        <section id="resume" className="border-y border-border bg-card/30">
-          <div className="mx-auto max-w-6xl scroll-mt-20 px-5 py-16">
-
-            <SectionHeading eyebrow="06 — Resume" title="Download my CV" />
-            <div className="grid items-center gap-8 rounded-xl border border-border bg-card p-7 md:grid-cols-[1fr_auto]">
-              <div className="flex items-start gap-4">
-                <span className="rounded-md bg-primary/10 p-3">
-                  <FileText className="size-6 text-primary" />
-                </span>
-                <div>
-                  <h3 className="font-display text-lg font-semibold">
-                    Adham Hany Mahmoud — Data Analyst CV
-                  </h3>
-                  <p className="mt-2 max-w-xl text-[0.95rem] leading-8 text-muted-foreground">
-                    A one-page PDF covering my technical toolbox, analytics projects, DEPI training
-                    experience, education and certificates — ready to share with recruiters.
-                  </p>
-                  <p className="mt-3 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-                    PDF · Updated 2026
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href={CV_URL}
-                  download="Adham-Hany-Mahmoud-CV.pdf"
-                  className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-                >
-                  <Download className="size-4" /> Download CV
-                </a>
-                <a
-                  href={CV_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold transition-colors hover:border-primary/60 hover:text-primary"
-                >
-                  <ArrowUpRight className="size-4" /> View in browser
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
 
         {/* Contact */}
         <section
