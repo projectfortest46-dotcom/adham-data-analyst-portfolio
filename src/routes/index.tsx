@@ -192,18 +192,33 @@ function Index() {
           <ul className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">
             {navItems.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className="transition-colors hover:text-primary">
+                <a
+                  href={item.href}
+                  download={item.download}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noopener noreferrer" : undefined}
+                  className="transition-colors hover:text-primary"
+                >
                   {item.label}
                 </a>
               </li>
             ))}
           </ul>
-          <a
-            href={`mailto:${EMAIL}`}
-            className="rounded-md bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Hire me
-          </a>
+          <div className="flex items-center gap-2">
+            <a
+              href={CV_URL}
+              download="adham-hany-cv.pdf"
+              className="hidden rounded-md border border-border bg-card px-4 py-2 text-xs font-semibold text-foreground transition-colors hover:border-primary/60 hover:text-primary sm:inline-block"
+            >
+              Resume
+            </a>
+            <a
+              href={`mailto:${EMAIL}`}
+              className="rounded-md bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              Hire me
+            </a>
+          </div>
         </nav>
       </header>
 
