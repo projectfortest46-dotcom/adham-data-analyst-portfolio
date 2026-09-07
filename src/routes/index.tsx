@@ -74,6 +74,7 @@ const navItems = [
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
   { label: "Education", href: "#education" },
+  { label: "Resume", href: CV_URL, external: true, download: "adham-hany-cv.pdf" },
   { label: "Contact", href: "#contact" },
 ];
 
