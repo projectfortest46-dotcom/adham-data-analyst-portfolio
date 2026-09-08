@@ -55,7 +55,7 @@ const SALES_REPO = "https://github.com/adhamhany794-maker/superstore-sales-profi
 const CV_URL = cvAsset.url;
 
 const PHONE = "+20 1204068168";
-const WHATSAPP_URL = `https://wa.me/${PHONE.replace(/[\s+]/g, "")}?text=Hi%20Adham`;
+const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=${PHONE.replace(/[\s+]/g, "")}&text=Hi%20Adham`;
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -654,9 +654,7 @@ function Index() {
               </a>
               <a
                 href={LINKEDIN}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open Adham Hany's LinkedIn profile in a new tab"
+                aria-label="Open Adham Hany's LinkedIn profile"
                 className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold transition-colors hover:border-primary/60 hover:text-primary"
               >
                 <Linkedin className="size-4" /> LinkedIn
@@ -672,8 +670,6 @@ function Index() {
               </a>
               <a
                 href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
                 aria-label="Open WhatsApp chat with Adham Hany"
                 title="Open WhatsApp chat"
                 className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold transition-colors hover:border-primary/60 hover:text-primary"
