@@ -47,7 +47,7 @@ export const Route = createFileRoute("/")({
 });
 
 const EMAIL = "adhamhany7771@gmail.com";
-const LINKEDIN = "https://linkedin.com/in/adham-hany-mahmoud/";
+const LINKEDIN = "https://www.linkedin.com/in/adham-hany-mahmoud/";
 const GITHUB = "https://github.com/adhamhany794-maker";
 const HOTEL_REPO =
   "https://github.com/adhamhany794-maker/Hotel-Booking-Performance-Cancellation-Analysis";
@@ -655,7 +655,8 @@ function Index() {
               <a
                 href={LINKEDIN}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label="Open Adham Hany's LinkedIn profile in a new tab"
                 className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold transition-colors hover:border-primary/60 hover:text-primary"
               >
                 <Linkedin className="size-4" /> LinkedIn
@@ -663,7 +664,8 @@ function Index() {
               <a
                 href={GITHUB}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label="Open Adham Hany's GitHub profile in a new tab"
                 className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold transition-colors hover:border-primary/60 hover:text-primary"
               >
                 <Github className="size-4" /> GitHub
@@ -671,8 +673,9 @@ function Index() {
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
-                rel="noreferrer"
-                title="Open WhatsApp chat (@Adham_Hany0_0)"
+                rel="noopener noreferrer"
+                aria-label="Open WhatsApp chat with Adham Hany"
+                title="Open WhatsApp chat"
                 className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold transition-colors hover:border-primary/60 hover:text-primary"
               >
                 <WhatsAppIcon className="size-4" /> {PHONE}
